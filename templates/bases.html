@@ -11,17 +11,17 @@
     <body>
     <form action = "/blog/newpost" method = "post">
         <label>
-            <div>SUBJECT</div>
-            <input type = "text" name ="subject" value = "{{blog.subject}}">
+            <div style= "margin: 5px ; font-family: 'Myriad Pro', TimesNewRoman">SUBJECT</div>
+            <input style= "margin: 2px" type = "text" name ="subject" value = "{{blog.subject}}">
         </label>
 
         <label>
-            <div>BLOG </div>
-            <textarea name= "blog">{{blog.blog}}</textarea>
+            <div style= "margin: 5px">BLOG </div>
+            <textarea style= "margin: 2px ; font-family: 'Myriad Pro', TimesNewRoman" name= "blog">{{blog.blog}}</textarea>
         </label>
 
         <div class = "error" style = "color: maroon"> {{error}} </div>
-        <input type = "submit">
+        <input style = "margin: 2px" type = "submit">
     </form>
 
 
