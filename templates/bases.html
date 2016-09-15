@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<!DOCTYPE html>
+    <head>
+    <title>
+    Blog submission
+    </title>
+    </head>
+    <body>
+    <form action = "/blog/newpost" method = "post">
+        <label>
+            <div>SUBJECT</div>
+            <input type = "text" name ="subject" value = "{{blog.subject}}">
+        </label>
+
+        <label>
+            <div>BLOG </div>
+            <textarea name= "blog">{{blog.blog}}</textarea>
+        </label>
+
+        <div class = "error" style = "color: maroon"> {{error}} </div>
+        <input type = "submit">
+    </form>
+
+
+    </body>
+</html>
+{% endblock %}

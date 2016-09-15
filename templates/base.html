@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Christian's Blog </title>
+    </head>
+
+    <body style = "margin: 0">
+        <h1 style = "background-color: blue; color: white; margin: 0 height: 50px ; text-align: center">
+            Launchcode Blog
+        </h1>
+        {% block content %}
+        {% endblock %}
+        {% for blog in blogs %}
+            <div class = "blog" >
+                <div class = "blog-title"  style = "text-align: center ; font-family: 'Myriad Pro', Sans-serif, TimesNewRoman">
+                <a href = "/blog/{{blog.key().id()}}">{{blog.subject}}</a>
+                </div>
+                <pre class = "blog-subject"  style = "text-align: center ; font-family: 'Myriad Pro', Sans-serif, TimesNewRoman"> {{blog.blog}}</div>
+            </div>
+        {% endfor %}
+
+
+
+    </body>
+</html>
